@@ -1,17 +1,17 @@
 # Snake
 
-A web-based remake of the classic Snake from the Nokia 3310: green LCD screen, pixel snake and a numeric keypad.
+A web-based remake of Snake II from the Nokia 3310. The game runs on a true 84 × 48 pixel LCD, rendered inside a photo of the phone, with a green backlight and glass glare.
 
-**Play:** open `index.html` in any browser. No build step and no dependencies.
+**Play:** https://pkritzinger.github.io/snake-pk/ or open `index.html` in any browser. No build step and no dependencies.
 
 ## Controls
 
-| Action        | Keyboard                        | Phone / touch            |
-|---------------|---------------------------------|--------------------------|
-| Steer         | Arrow keys, WASD, or 2 / 4 / 6 / 8 | Keypad 2 / 4 / 6 / 8 or swipe on the screen |
-| Start / OK    | Enter or 5                      | Key 5 or tap the screen  |
-| Pause         | Space or P                      | "Pause" soft key         |
-| Change speed  | L                               | "Level" soft key         |
+| Action        | Keyboard                           | On the phone                         |
+|---------------|------------------------------------|--------------------------------------|
+| Steer         | Arrow keys, WASD, or 2 / 4 / 6 / 8 | Keys 2 / 4 / 6 / 8 or swipe the screen |
+| Start / OK    | Enter or 5                         | Key 5, Navi key, or tap the screen   |
+| Pause         | Space or P                         | C key (left)                         |
+| Change speed  | L                                  | Scroll key (right)                   |
 
 ## Rules
 

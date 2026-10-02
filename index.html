@@ -8,41 +8,32 @@
 </head>
 <body>
   <main class="phone">
-    <div class="brand">NOKIA-ish</div>
+    <!-- Layers, back to front: backlit glass, LCD pixels, phone photo, glass glare, key hotspots.
+         Positions are in pixels of 3310.png (540 x 1250) and converted to % in CSS. -->
+    <div class="glass"></div>
+    <canvas id="game" width="672" height="384" aria-label="Snake game screen"></canvas>
+    <img class="body" src="3310.png" alt="Nokia 3310" draggable="false">
+    <div class="glare" id="screen"></div>
 
-    <div class="screen">
-      <div class="hud">
-        <span id="score">0000</span>
-        <span id="bonus" hidden></span>
-        <span id="level">LV 5</span>
-      </div>
-      <canvas id="game" width="384" height="224"></canvas>
-      <div id="overlay" class="overlay">
-        <div id="overlay-title">SNAKE</div>
-        <div id="overlay-text">Press 5 / Enter to start</div>
-        <div id="overlay-sub">Hi: <span id="hiscore">0</span></div>
-      </div>
-    </div>
+    <button class="hot" data-action="ok"    aria-label="Navi key (OK)" style="--x:172;--y:655;--w:201;--h:54"></button>
+    <button class="hot" data-action="pause" aria-label="C key (pause)" style="--x:90;--y:685;--w:100;--h:90;--r:20deg"></button>
+    <button class="hot" data-action="level" aria-label="Scroll key (level)" style="--x:300;--y:688;--w:140;--h:115;--r:-20deg"></button>
 
-    <div class="softkeys">
-      <button class="soft" id="btn-level" title="Change speed (L)">Level</button>
-      <button class="soft" id="btn-pause" title="Pause (Space / P)">Pause</button>
-    </div>
-
-    <div class="keypad">
-      <button class="key" data-key="1">1</button>
-      <button class="key dir" data-dir="up">2<small>&#9650;</small></button>
-      <button class="key" data-key="3">3</button>
-      <button class="key dir" data-dir="left">4<small>&#9664;</small></button>
-      <button class="key ok" data-action="ok">5<small>OK</small></button>
-      <button class="key dir" data-dir="right">6<small>&#9654;</small></button>
-      <button class="key" data-key="7">7</button>
-      <button class="key dir" data-dir="down">8<small>&#9660;</small></button>
-      <button class="key" data-key="9">9</button>
-    </div>
-
-    <p class="help">Arrows / WASD / 2-4-6-8 to steer · Space to pause · L for speed</p>
+    <button class="hot" data-key="1"                 aria-label="1" style="--x:72;--y:818;--w:84;--h:60;--r:12deg"></button>
+    <button class="hot" data-key="2" data-dir="up"    aria-label="2 (up)" style="--x:222;--y:840;--w:105;--h:58"></button>
+    <button class="hot" data-key="3"                 aria-label="3" style="--x:380;--y:815;--w:96;--h:65;--r:-12deg"></button>
+    <button class="hot" data-key="4" data-dir="left"  aria-label="4 (left)" style="--x:78;--y:904;--w:95;--h:60;--r:12deg"></button>
+    <button class="hot" data-key="5" data-action="ok" aria-label="5 (OK)" style="--x:222;--y:928;--w:105;--h:58"></button>
+    <button class="hot" data-key="6" data-dir="right" aria-label="6 (right)" style="--x:372;--y:901;--w:97;--h:65;--r:-12deg"></button>
+    <button class="hot" data-key="7"                 aria-label="7" style="--x:84;--y:992;--w:77;--h:59;--r:12deg"></button>
+    <button class="hot" data-key="8" data-dir="down"  aria-label="8 (down)" style="--x:222;--y:1016;--w:105;--h:58"></button>
+    <button class="hot" data-key="9"                 aria-label="9" style="--x:368;--y:989;--w:97;--h:65;--r:-12deg"></button>
+    <button class="hot" data-key="*"                 aria-label="*" style="--x:90;--y:1080;--w:84;--h:59;--r:12deg"></button>
+    <button class="hot" data-key="0"                 aria-label="0" style="--x:222;--y:1105;--w:105;--h:59"></button>
+    <button class="hot" data-key="#"                 aria-label="#" style="--x:364;--y:1078;--w:97;--h:64;--r:-12deg"></button>
   </main>
+
+  <p class="help">Arrows / WASD / 2-4-6-8 steer · 5 / Enter OK · Space pause · L level</p>
 
   <script src="game.js"></script>
 </body>
