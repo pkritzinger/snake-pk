@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>Snake</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="phone">
+    <div class="brand">NOKIA-ish</div>
+
+    <div class="screen">
+      <div class="hud">
+        <span id="score">0000</span>
+        <span id="bonus" hidden></span>
+        <span id="level">LV 5</span>
+      </div>
+      <canvas id="game" width="384" height="224"></canvas>
+      <div id="overlay" class="overlay">
+        <div id="overlay-title">SNAKE</div>
+        <div id="overlay-text">Press 5 / Enter to start</div>
+        <div id="overlay-sub">Hi: <span id="hiscore">0</span></div>
+      </div>
+    </div>
+
+    <div class="softkeys">
+      <button class="soft" id="btn-level" title="Change speed (L)">Level</button>
+      <button class="soft" id="btn-pause" title="Pause (Space / P)">Pause</button>
+    </div>
+
+    <div class="keypad">
+      <button class="key" data-key="1">1</button>
+      <button class="key dir" data-dir="up">2<small>&#9650;</small></button>
+      <button class="key" data-key="3">3</button>
+      <button class="key dir" data-dir="left">4<small>&#9664;</small></button>
+      <button class="key ok" data-action="ok">5<small>OK</small></button>
+      <button class="key dir" data-dir="right">6<small>&#9654;</small></button>
+      <button class="key" data-key="7">7</button>
+      <button class="key dir" data-dir="down">8<small>&#9660;</small></button>
+      <button class="key" data-key="9">9</button>
+    </div>
+
+    <p class="help">Arrows / WASD / 2-4-6-8 to steer · Space to pause · L for speed</p>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
